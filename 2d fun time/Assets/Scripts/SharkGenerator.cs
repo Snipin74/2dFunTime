@@ -13,6 +13,7 @@ public class SharkGenerator : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         sharkWidth = theShark.GetComponent<BoxCollider2D>().size.x;
+        theShark = null;
 	}
 	
 	// Update is called once per frame

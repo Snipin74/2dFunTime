@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SharkMove : MonoBehaviour {
-
+{
     public int moveShark = 10;
     [SerializeField] private float speed;
 
@@ -22,4 +22,5 @@ public class SharkMove : MonoBehaviour {
         transform.position = Vector3.MoveTowards(transform.position, target.position, step);
 
     }
+}
 }
