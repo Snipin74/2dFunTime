@@ -6,8 +6,8 @@ public class SharkGenerator : MonoBehaviour {
 
     public GameObject theShark;
     public Transform generationPoint;
-    public float distanceBetween;
-
+    public float distanceBetween, min, max;
+    public bool spawning = false;
     private float sharkWidth;
 
 	// Use this for initialization
@@ -17,13 +17,17 @@ public class SharkGenerator : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (transform.position.x < generationPoint.position.x)
+        if (!spawning)
         {
-            transform.position = new Vector3(transform.position.x + sharkWidth + distanceBetween, transform.position.y, transform.position.z);
-
-            Instantiate(theShark, transform.position, transform.rotation);
-
-            
+            spawning = true;
+            StartCoroutine(spawn());
         }
 	}
+
+    public IEnumerator spawn()
+    {
+        yield return new WaitForSecondsRealtime(Random.Range(min, max));
+        Instantiate(theShark, transform.position, transform.rotation);
+        spawning = false;
+    }
 }
