@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 61521050220770944}
   - component: {fileID: 114390575771649074}
   - component: {fileID: 61665135193662586}
+  - component: {fileID: 114890139751703218}
   m_Layer: 10
   m_Name: Shark_1
   m_TagString: Untagged
@@ -121,6 +122,18 @@ MonoBehaviour:
   speed: 6
   target: {fileID: 4462728042967648, guid: ba0a21f08e04808478f9807042a84e38, type: 2}
   target1: {fileID: 0}
+--- !u!114 &114890139751703218
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1740762004951426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8904d105970d14c46a08df12bbaa0416, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SharkDestructionPoint: {fileID: 0}
 --- !u!212 &212010866019116302
 SpriteRenderer:
   m_ObjectHideFlags: 1

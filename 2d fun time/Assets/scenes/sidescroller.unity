@@ -304,7 +304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8904d105970d14c46a08df12bbaa0416, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SharkDestructionPoint: {fileID: 0}
+  SharkDestructionPoint: {fileID: 378464240}
 --- !u!1 &420402745
 GameObject:
   m_ObjectHideFlags: 0
@@ -1842,7 +1842,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theShark: {fileID: 1740762004951426, guid: fe5f8b103650a9d4aa41a849154d861d, type: 2}
-  generationPoint: {fileID: 0}
+  generationPoint: {fileID: 1610722085}
   distanceBetween: 0
   min: 3
   max: 5
