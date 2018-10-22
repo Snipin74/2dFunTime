@@ -17,10 +17,11 @@ public class SharkMove : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+
         float step = speed * Time.deltaTime;
-
-        transform.position = Vector3.MoveTowards(transform.position, target.position, step);
-
+    
+         transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+        
     }
 }
 
