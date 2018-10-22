@@ -330,7 +330,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &253619218
 GameObject:
@@ -664,7 +664,7 @@ Transform:
   m_LocalScale: {x: 1.0000011, y: 1.0000015, z: 1}
   m_Children: []
   m_Father: {fileID: 2008622064}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &522983744
 SpriteRenderer:
@@ -721,6 +721,8 @@ GameObject:
   - component: {fileID: 528191934}
   - component: {fileID: 528191933}
   - component: {fileID: 528191936}
+  - component: {fileID: 528191937}
+  - component: {fileID: 528191938}
   m_Layer: 0
   m_Name: Shark_1
   m_TagString: Untagged
@@ -739,8 +741,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41965cd6a82e7774c963266356ff0c84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveShark: 10
-  speed: 2
+  moveShark: 0
+  speed: 6
   target: {fileID: 177762016}
   target1: {fileID: 0}
 --- !u!212 &528191934
@@ -798,7 +800,7 @@ Transform:
   m_LocalScale: {x: 0.54999924, y: 0.560624, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &528191936
 BoxCollider2D:
@@ -810,6 +812,43 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 9.88, y: 6.37}
+    newSize: {x: 9.88, y: 6.37}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 9.88, y: 6.37}
+  m_EdgeRadius: 0
+--- !u!114 &528191937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 528191932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b1f6f88e719d2845ba844c3d44475a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetPlayer: {fileID: 0}
+--- !u!61 &528191938
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 528191932}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1067,11 +1106,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 742631375}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 45, y: 0, z: 0}
-  m_LocalScale: {x: 1.0000011, y: 1.0000015, z: 1}
+  m_LocalPosition: {x: -22.499977, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2008622064}
-  m_RootOrder: 1
+  m_Father: {fileID: 2108728313}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &742631377
 SpriteRenderer:
@@ -1631,12 +1670,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1551310179}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.17, y: -4.07, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.88, y: -4.07, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1551310183
 Rigidbody2D:
@@ -1692,6 +1731,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
+  isDead: 0
 --- !u!1 &1610722083
 GameObject:
   m_ObjectHideFlags: 0
@@ -1722,6 +1762,9 @@ MonoBehaviour:
   theShark: {fileID: 528191932}
   generationPoint: {fileID: 1430286990}
   distanceBetween: 10
+  min: 3
+  max: 10
+  spawning: 0
 --- !u!4 &1610722085
 Transform:
   m_ObjectHideFlags: 0
@@ -1733,7 +1776,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1614729945
 GameObject:
@@ -1762,7 +1805,7 @@ Transform:
   m_LocalScale: {x: 1.0000011, y: 1.0000015, z: 1}
   m_Children: []
   m_Father: {fileID: 2008622064}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1614729947
 SpriteRenderer:
@@ -2172,7 +2215,6 @@ Transform:
   m_LocalScale: {x: 0.5530394, y: 0.4333293, z: 1}
   m_Children:
   - {fileID: 1376385562}
-  - {fileID: 742631376}
   - {fileID: 2108728313}
   - {fileID: 522983743}
   - {fileID: 1614729946}
@@ -2221,9 +2263,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 67.5, y: 0, z: 0}
   m_LocalScale: {x: 1.0000011, y: 1.0000015, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 742631376}
   m_Father: {fileID: 2008622064}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2108728314
 SpriteRenderer:

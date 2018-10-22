@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour {
 
     public bool grounded;
     public LayerMask whatIsGround;
+    public bool isDead = false;
 
     private Collider2D myCollider;
 
@@ -34,5 +35,9 @@ public class PlayerController : MonoBehaviour {
                 myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, Jump);
             }
         }
-	}
+        if (isDead == true)
+        {
+
+        }
+    }
 }
