@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
     public float moveSpeed;
@@ -35,9 +36,19 @@ public class PlayerController : MonoBehaviour {
                 myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, Jump);
             }
         }
-        if (isDead == true)
+        if (isDead)
         {
 
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == 10)
+        {
+            //LOADS THE SAME SCENE AGAIN, CHANGE '0'
+            SceneManager.LoadScene(0, LoadSceneMode.Single);
+            
         }
     }
 }
