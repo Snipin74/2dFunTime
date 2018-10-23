@@ -8,23 +8,12 @@ public class yellowFish : MonoBehaviour {
 
     [SerializeField] public float speed;
 
-    public Collider coll;
-
-
-    public bool PhysicsGravity { get; private set; }
 
     // Use this for initialization
     void Start() {
 
-        coll = GetComponent<Collider>();
-        coll.isTrigger = true;
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.attachedRigidbody)
-            other.attachedRigidbody.useGravity = false;
-    }
     // Update is called once per frame
     void Update() {
 

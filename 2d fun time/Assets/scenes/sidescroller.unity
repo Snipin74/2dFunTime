@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 126431968}
   - component: {fileID: 126431967}
   m_Layer: 0
-  m_Name: sharkGenerator (1)
+  m_Name: fishGenerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1338,6 +1338,8 @@ GameObject:
   - component: {fileID: 928116581}
   - component: {fileID: 928116580}
   - component: {fileID: 928116582}
+  - component: {fileID: 928116583}
+  - component: {fileID: 928116584}
   m_Layer: 0
   m_Name: fish (1)
   m_TagString: Untagged
@@ -1396,8 +1398,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 928116579}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -22, y: -3.27, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -22.477, y: -3.811, z: 0}
+  m_LocalScale: {x: 0.6604921, y: 0.5935268, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 18
@@ -1417,6 +1419,43 @@ MonoBehaviour:
   speed: 3
   target: {fileID: 177762016}
   target1: {fileID: 0}
+--- !u!61 &928116583
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 928116579}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.81, y: 2.66}
+    newSize: {x: 2.81, y: 2.66}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.81, y: 2.66}
+  m_EdgeRadius: 0
+--- !u!114 &928116584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 928116579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0658be0257f86b42b3e215ccffea2dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreToGive: 100
 --- !u!1 &1013474261
 GameObject:
   m_ObjectHideFlags: 0
@@ -1966,7 +2005,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target1: {fileID: 177762016}
   speed: 5
-  coll: {fileID: 0}
 --- !u!61 &1546765142
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2037,6 +2075,7 @@ GameObject:
   - component: {fileID: 1551310183}
   - component: {fileID: 1551310184}
   - component: {fileID: 1551310185}
+  - component: {fileID: 1551310186}
   m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
@@ -2181,6 +2220,18 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   isDead: 0
+--- !u!114 &1551310186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1551310179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0658be0257f86b42b3e215ccffea2dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreToGive: 500
 --- !u!1 &1610722083
 GameObject:
   m_ObjectHideFlags: 0
@@ -2211,7 +2262,7 @@ MonoBehaviour:
   theShark: {fileID: 1740762004951426, guid: fe5f8b103650a9d4aa41a849154d861d, type: 2}
   generationPoint: {fileID: 1610722085}
   distanceBetween: 0
-  min: 3
+  min: 2
   max: 5
   spawning: 0
 --- !u!4 &1610722085
@@ -2853,7 +2904,7 @@ MonoBehaviour:
   scoreCount: 0
   hiScoreCount: 0
   pointsPerSecond: 10
-  scoreIncreasing: 0
+  scoreIncreasing: 1
 --- !u!1 &2108728312
 GameObject:
   m_ObjectHideFlags: 0
