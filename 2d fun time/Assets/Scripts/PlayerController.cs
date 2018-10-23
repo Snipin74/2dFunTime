@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour {
         if (collision.gameObject.layer == 10)
         {
             //LOADS THE SAME SCENE AGAIN, CHANGE '0'
-            SceneManager.LoadScene(0, LoadSceneMode.Single);
+            SceneManager.LoadScene("DeathScreen");
             
         }
     }

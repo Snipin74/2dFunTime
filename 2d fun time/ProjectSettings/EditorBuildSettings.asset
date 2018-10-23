@@ -6,5 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/scenes/mainMenu.unity
+    guid: 3e21b5b8b3b9d7e418bfb50425644cf4
+  - enabled: 1
     path: Assets/scenes/sidescroller.unity
     guid: 65bb1e8766385484699172381c73865a
+  - enabled: 1
+    path: Assets/scenes/DeathScreen.unity
+    guid: 68cbbfa18e5085542b29991936a3408d
