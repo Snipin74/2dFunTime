@@ -24,17 +24,18 @@ public class scoreManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-      //  if (scoreIncreasing)
-       // {
+        if (scoreIncreasing)
+        {
             scoreCount += pointsPerSecond * Time.deltaTime;
-       // }
+        }
 
-       // if (scoreCount > hiScoreCount)
-        //{
-       //     hiScoreCount = scoreCount;
-        //}
+        if (scoreCount > hiScoreCount)
+        {
+            hiScoreCount = scoreCount;
+        }
+
         scoreText.text = "Score: " + Mathf.Round (scoreCount);
-        //hiScoreText.text = "High Score: " + Mathf.Round (hiScoreCount); 
+        hiScoreText.text = "High Score: " + Mathf.Round (hiScoreCount); 
 	}
 
     public void addScore(int pointsToAdd)
